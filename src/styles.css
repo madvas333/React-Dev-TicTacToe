@@ -6,7 +6,9 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  background-color: #ffccff; /* Soft pink background */
 }
+
 
 h1 {
   margin-top: 0;
@@ -50,26 +52,22 @@ ul {
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 2px solid #999; /* Make the border a bit thicker for more emphasis */
   float: left;
-  font-size: 24px;
+  font-size: 48px; /* Increase the font size */
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 64px; /* Adjust the line height to match the square size */
+  height: 64px; /* Make the square taller */
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 64px; /* Make the square wider */
 }
+
 
 .board-row:after {
   clear: both;
@@ -83,8 +81,23 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center; /* Center the game horizontally */
+  align-items: center; /* Center the game vertically */
+  min-height: 100vh; /* Make sure it takes up the full height of the viewport */
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 40px; /* Add some space between the board and the info */
+  font-size: 24px; /* Increase the font size for better readability */
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 28px; /* Increase the status font size for emphasis */
 }
