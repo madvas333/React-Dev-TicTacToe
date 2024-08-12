@@ -4,7 +4,7 @@ import Home from './Home';
 import Checkers from './Checkers';
 import TicTacToe from './TicTacToe';
 import NavBar from './NavBar'
-import './styles.css'
+import './Navbar.css'
 
 function App() { 
   return (
