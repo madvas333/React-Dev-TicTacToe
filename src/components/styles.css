@@ -33,7 +33,7 @@ h3 {
   font-family: 'Pacifico', cursive;
   margin-top: 0;
   font-size: 18px;
-  border: 20px solid #ffffff; /* White border */
+  border: 10px solid #ffffff; /* White border */
   border-radius: 10px;
 }
 
@@ -47,7 +47,7 @@ p {
   color: #2e5437; /* The same color you wanted */
   font-family: 'Pacifico', cursive;
   margin-top: 0;
-  font-size: 100px; /* Your big font size */
+  font-size: 30px; /* Your big font size */
 }
 
 h4 {

@@ -1,17 +1,39 @@
 .footer {
-    position: fixed; /* Keeps the footer at the bottom */
+  position: fixed; /* Keeps the footer at the bottom */
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: #ffccff; /* Match your soft pink theme */
     padding: 10px 0;
-  }
-  
-  .rotating-image {
-    width: 50px; /* Adjust the size of the image */
-    height: 50px;
-    animation: rotation 5s infinite linear; /* 5 seconds rotation, infinitely */
-  }
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  background-color: #ff99cc; /* Pretty pink shade */
+  color: #ffffff; /* White text color */
+  font-family: 'Pacifico', cursive; /* Bubbly font from Google Fonts */
+  font-size: 24px; /* Make the font big and fun */
+  padding: 10px 20px;
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 10px; /* Make the corners slightly rounded */
+  width: 100%; /* Make it take the full width */
+  text-align: center;
+}
+
+.navbar-item a {
+  color: #ffffff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Slightly adjust font size */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rotating-image {
+  width: 100px; /* Adjust the size of the image */
+  height: 100px;
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area, cropping it as needed */
+  animation: rotation 12s infinite linear; /* Rotate the image smoothly */
+}
+
   
   @keyframes rotation {
     from {
