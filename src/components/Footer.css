@@ -1,0 +1,24 @@
+.footer {
+    position: fixed; /* Keeps the footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ffccff; /* Match your soft pink theme */
+    padding: 10px 0;
+  }
+  
+  .rotating-image {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px;
+    animation: rotation 5s infinite linear; /* 5 seconds rotation, infinitely */
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

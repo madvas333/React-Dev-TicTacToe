@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles.css';
+import './styles.css'; // Adjust path to point one level up to src folder
+
 
 function Checkers() {
   return (

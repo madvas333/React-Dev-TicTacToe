@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css'; // Make sure to link your CSS file
+import '../components/Navbar.css'; // Make sure to link your CSS file
 
 export default function Home() {
   return (
