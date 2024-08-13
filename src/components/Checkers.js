@@ -1,14 +1,12 @@
 import React from 'react';
-import './styles.css'; // Adjust path to point one level up to src folder
+import Checkerboard from './Checkerboard'; // Import your new Checkerboard component
+import './Checkers.css'; // If you have specific styles for this page
 
-
-function Checkers() {
+export default function Checkers() {
   return (
-    <div>
+    <div className="checkers-page">
       <h1>Checkers Game</h1>
-     
+      <Checkerboard />
     </div>
   );
 }
-
-export default Checkers;
