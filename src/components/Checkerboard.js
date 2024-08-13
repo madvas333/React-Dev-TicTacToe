@@ -9,7 +9,7 @@ export default function Checkerboard() {
     // Just a basic example: toggle the square's color between 'X' and 'O'
     const newBoard = board.map((r, rowIndex) =>
       r.map((square, colIndex) =>
-        rowIndex === row && colIndex === col ? (square === 'X' ? 'O' : 'X') : square
+        rowIndex === row && colIndex === col ? (square === '<3' ? 'O' : '<3') : square
       )
     );
     setBoard(newBoard);
