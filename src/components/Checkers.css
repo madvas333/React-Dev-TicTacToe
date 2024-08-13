@@ -13,10 +13,10 @@
 }
 
 .black {
-  background-color: #000000; /* Black square */
+  background-color: #c745bc; /* Black square */
 }
 
 .white {
   background-color: #ffffff; /* White square */
-  border: 1px solid #000; /* Add a small border to the white squares */
+  border: 3px solid #83de75; /* Add a small border to the white squares */
 }
