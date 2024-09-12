@@ -8,15 +8,22 @@
 }
 
 .square {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Adjust this to make the symbols smaller or larger */
+  height: 100px; /* Adjust this based on your desired square size */
+  width: 100px; /* Same as height to keep it square */
 }
 
+
 .black {
-  background-color: #c745bc; /* Black square */
+  background-color: #c745bc; 
+  color: olivedrab;
 }
 
 .white {
-  background-color: #ffffff; /* White square */
-  border: 3px solid #83de75; /* Add a small border to the white squares */
+  background-color: #ffffff; 
+  border: 3px solid #83de75; 
+  color: orange;
 }

@@ -5,6 +5,7 @@ export default function Checkerboard() {
   const size = 8;
   const [board, setBoard] = useState(Array(size).fill(null).map(() => Array(size).fill(null)));
   const [currentPlayer, setCurrentPlayer] = useState('<3'); // Start with Player <3!
+  const [moves, setMoves] = useState([]); // Track the moves
 
   const handleClick = (row, col) => {
     // If the square is already filled, we can't change it!
@@ -22,7 +23,14 @@ export default function Checkerboard() {
     // Update the board
     setBoard(newBoard);
 
-    // Switch to the other player (let's alternate between <3 and O)
+    // Log the move with player and position (row, col)
+    const newMove = {
+      player: currentPlayer,
+      position: [row, col]
+    };
+    setMoves([...moves, newMove]); // Add the move to the list
+
+    // Switch to the other player
     setCurrentPlayer(currentPlayer === '<3' ? 'O' : '<3');
   };
 
@@ -44,8 +52,21 @@ export default function Checkerboard() {
           })}
         </div>
       ))}
+      
       <div className="current-player">
         Current Player: {currentPlayer}
+      </div>
+
+      {/* Move history section */}
+      <div className="move-history">
+        <h3>Move History</h3>
+        <ul>
+          {moves.map((move, index) => (
+            <li key={index}>
+              Player {move.player} moved to row {move.position[0] + 1}, col {move.position[1] + 1}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
