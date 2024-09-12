@@ -4,15 +4,26 @@ import './Checkers.css'; // Your stylish CSS file, of course!
 export default function Checkerboard() {
   const size = 8;
   const [board, setBoard] = useState(Array(size).fill(null).map(() => Array(size).fill(null)));
-  
+  const [currentPlayer, setCurrentPlayer] = useState('<3'); // Start with Player <3!
+
   const handleClick = (row, col) => {
-    // Just a basic example: toggle the square's color between 'X' and 'O'
+    // If the square is already filled, we can't change it!
+    if (board[row][col] !== null) {
+      return;
+    }
+
+    // Create a new copy of the board with the updated move
     const newBoard = board.map((r, rowIndex) =>
       r.map((square, colIndex) =>
-        rowIndex === row && colIndex === col ? (square === '<3' ? 'O' : '<3') : square
+        rowIndex === row && colIndex === col ? currentPlayer : square
       )
     );
+
+    // Update the board
     setBoard(newBoard);
+
+    // Switch to the other player (let's alternate between <3 and O)
+    setCurrentPlayer(currentPlayer === '<3' ? 'O' : '<3');
   };
 
   return (
@@ -33,6 +44,9 @@ export default function Checkerboard() {
           })}
         </div>
       ))}
+      <div className="current-player">
+        Current Player: {currentPlayer}
+      </div>
     </div>
   );
 }
