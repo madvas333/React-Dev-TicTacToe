@@ -7,6 +7,11 @@ export default function Checkers() {
     <div className="checkers-page">
       <h1>Checkers Game</h1>
       <Checkerboard />
+      
+      {/* Add a footer here */}
+      <footer>
+        Fabulous Footer Content!
+      </footer>
     </div>
   );
 }

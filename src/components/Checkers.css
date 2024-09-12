@@ -1,7 +1,18 @@
-.checkerboard {
-  display: inline-block;
-  margin: 20px auto;
+/* Scrollable move history */
+.move-history {
+  margin-top: 20px;
+  max-height: 200px; /* Constrain the height of the move history */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  border: 2px solid #83de75;
+  padding: 10px;
+  background-color: #fff;
 }
+
+/* Ensure checkerboard and move history have space */
+.checkerboard {
+  margin-bottom: 20px;
+}
+
 
 .row {
   display: flex;
