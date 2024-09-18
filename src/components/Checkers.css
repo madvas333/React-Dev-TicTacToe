@@ -1,34 +1,31 @@
-/* Make the page layout flexible */
+/* Make the whole page take up the full viewport height */
 .checkers-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full height of the viewport */
+  min-height: 100vh; /* Full height of the screen */
 }
 
-/* The main game content (checkerboard and move history) */
+/* Ensure that the content grows to fill available space without squishing the footer */
 .game-content {
-  flex-grow: 1; /* Allows the game content to grow and push the footer down */
+  flex-grow: 1; /* This allows the game content to take up the remaining space */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Checkerboard and move history stay side by side */
   padding: 20px;
 }
 
-/* Styling the Move History box */
+/* Make sure the move history box is scrollable when there are too many moves */
 .move-history-box {
-  margin-top: 20px;
-  border: 2px solid #83de75; /* Add a cute border */
+  border: 2px solid pink; /* A cute border to match your vibe! */
   padding: 10px;
-  background-color: #fff;
-  max-height: 200px; /* Set a maximum height */
-  overflow-y: auto; /* Scroll the content if it overflows */
+  width: 200px;
+  max-height: 300px; /* Keeps it cute and limited in height */
+  overflow-y: auto; /* Scroll when it overflows */
 }
 
-/* Footer stays at the bottom of the page */
+/* Fix that fabulous footer at the bottom */
 footer {
-  background-color: #c745bc;
-  color: white;
-  padding: 10px;
   text-align: center;
-  width: 100%;
-  margin-top: auto; /* Pushes footer to the bottom */
+  background-color: lightpink; /* Keeping the style on point! */
+  padding: 10px;
+  margin-top: auto; /* This is the real magic! Forces footer to the bottom */
 }
