@@ -3,11 +3,7 @@ import Checkerboard from './Checkerboard'; // Import your new Checkerboard compo
 import './Checkers.css'; // Your CSS file for this page
 
 export default function Checkers() {
-  // Let's add some sparkle by managing move history in state
-  const [moveHistory, setMoveHistory] = useState([
-    "Player <3 moved to row 1, col 2",
-    "Player O moved to row 2, col 3",
-  ]);
+  const [moveHistory, setMoveHistory] = useState([]);
 
   return (
     <div className="checkers-page">
@@ -28,7 +24,7 @@ export default function Checkers() {
         </div>
       </div>
 
-      {/* Footer at the bottom of the page with extra fabulous content */}
+      {/* Footer at the bottom of the page */}
       <footer>
         💖 Fabulous Footer Content! 💖
       </footer>
