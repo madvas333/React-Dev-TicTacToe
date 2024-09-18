@@ -1,40 +1,34 @@
-/* Scrollable move history */
-.move-history {
+/* Make the page layout flexible */
+.checkers-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* The main game content (checkerboard and move history) */
+.game-content {
+  flex-grow: 1; /* Allows the game content to grow and push the footer down */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Styling the Move History box */
+.move-history-box {
   margin-top: 20px;
-  max-height: 200px; /* Constrain the height of the move history */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
-  border: 2px solid #83de75;
+  border: 2px solid #83de75; /* Add a cute border */
   padding: 10px;
   background-color: #fff;
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto; /* Scroll the content if it overflows */
 }
 
-/* Ensure checkerboard and move history have space */
-.checkerboard {
-  margin-bottom: 20px;
-}
-
-
-.row {
-  display: flex;
-}
-
-.square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem; /* Adjust this to make the symbols smaller or larger */
-  height: 100px; /* Adjust this based on your desired square size */
-  width: 100px; /* Same as height to keep it square */
-}
-
-
-.black {
-  background-color: #c745bc; 
-  color: olivedrab;
-}
-
-.white {
-  background-color: #ffffff; 
-  border: 3px solid #83de75; 
-  color: orange;
+/* Footer stays at the bottom of the page */
+footer {
+  background-color: #c745bc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* Pushes footer to the bottom */
 }
